@@ -6,15 +6,6 @@ def get_data_points_mmr(user, id):
     
     history = user.mmr_history()
     
-    last_key = list(history.keys())[0]
-    for datapoint in history.keys():
-        print(last_key, datapoint)
-        if datapoint - last_key > 0:
-             print("f in the chat boys")
-             
-        last_key = datapoint
-        
-    
     return history
 
 def get_elo(user, id):
