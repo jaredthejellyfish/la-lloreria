@@ -1,4 +1,4 @@
-from flask_pwa import create_app
+from la_lloreria import create_app
 
 app = create_app()
 

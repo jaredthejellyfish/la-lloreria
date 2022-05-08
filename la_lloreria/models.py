@@ -1,4 +1,4 @@
-from flask_pwa import db, login_manager
+from la_lloreria import db, login_manager
 from flask_login import UserMixin
 
 from itsdangerous import URLSafeTimedSerializer as Serializer

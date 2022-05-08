@@ -5,7 +5,7 @@ from flask_bcrypt import Bcrypt
 
 from flask_minify import Minify
 
-from flask_pwa.config import Config
+from la_lloreria.config import Config
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -19,8 +19,8 @@ def create_app(config_class=Config):
     bcrypt.init_app(app)
     #login_manager.init_app(app)
 
-    from flask_pwa.main.routes import main
-    from flask_pwa.valorant.routes import valorant
+    from la_lloreria.main.routes import main
+    from la_lloreria.valorant.routes import valorant
     
     app.register_blueprint(main)
     app.register_blueprint(valorant)

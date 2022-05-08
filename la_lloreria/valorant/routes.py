@@ -1,7 +1,5 @@
-from flask_pwa.valorant.utils import get_account_data, get_data_points_mmr, get_elo, get_data_points_matches
-from flask import render_template, url_for, redirect
-from flask_login import login_required, current_user
-from flask import Blueprint, send_from_directory
+from la_lloreria.valorant.utils import get_account_data, get_data_points_mmr, get_elo, get_data_points_matches
+from flask import Blueprint
 
 valorant = Blueprint('valorant', __name__)
 
@@ -11,6 +9,7 @@ def mmr(user, id):
 
 @valorant.route('/elo/<user>/<id>', methods=["GET"])
 def elo(user, id):
+    print(user)
     return get_elo(user, id)
 
 @valorant.route('/matches/<user>/<id>', methods=["GET"])
